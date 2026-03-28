@@ -1,0 +1,345 @@
+
+:root {
+    --app-bg: #fffaf6;
+    --app-card: rgba(255, 255, 255, 0.92);
+    --app-primary: #ef7d6f;
+    --app-primary-rgb: 239, 125, 111;
+    --app-primary-soft: #fde9e5;
+    --app-primary-deep: #d8685a;
+    --app-secondary: #7c8ea3;
+    --app-success-soft: #e8f7ee;
+    --app-warning-soft: #fff3df;
+    --app-shadow: 0 14px 40px rgba(54, 64, 93, 0.08);
+    --app-radius: 28px;
+    --mesh-a: rgba(var(--app-primary-rgb), 0.22);
+    --mesh-b: rgba(255, 255, 255, 0.82);
+    --mesh-c: rgba(255, 239, 232, 0.78);
+    --mesh-d: rgba(var(--app-primary-rgb), 0.10);
+    --app-text-tint: #b95e55;
+}
+
+body {
+    background:
+        radial-gradient(circle at 12% 12%, var(--mesh-a) 0%, transparent 32%),
+        radial-gradient(circle at 86% 14%, var(--mesh-d) 0%, transparent 28%),
+        radial-gradient(circle at 78% 86%, var(--mesh-c) 0%, transparent 26%),
+        linear-gradient(180deg, var(--app-bg) 0%, #ffffff 100%);
+    color: #2f3142;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body.role-patient {
+    --app-bg: #fff8f5;
+    --app-card: rgba(255,255,255,0.94);
+    --app-primary: #ef7d6f;
+    --app-primary-rgb: 239, 125, 111;
+    --app-primary-soft: #fde9e5;
+    --app-primary-deep: #d8685a;
+    --mesh-a: rgba(239, 125, 111, 0.22);
+    --mesh-b: rgba(255, 255, 255, 0.84);
+    --mesh-c: rgba(255, 234, 228, 0.84);
+    --mesh-d: rgba(248, 178, 165, 0.18);
+    --app-text-tint: #b95e55;
+}
+
+body.role-aidant {
+    --app-bg: #f7fbff;
+    --app-card: rgba(255,255,255,0.94);
+    --app-primary: #88aedf;
+    --app-primary-rgb: 136, 174, 223;
+    --app-primary-soft: #e8f1fe;
+    --app-primary-deep: #6f97cb;
+    --mesh-a: rgba(136, 174, 223, 0.24);
+    --mesh-b: rgba(255, 255, 255, 0.86);
+    --mesh-c: rgba(233, 242, 255, 0.82);
+    --mesh-d: rgba(184, 208, 240, 0.22);
+    --app-text-tint: #5e7ea8;
+}
+
+body.role-centre {
+    --app-bg: #f8fcf8;
+    --app-card: rgba(255,255,255,0.94);
+    --app-primary: #8dc9b1;
+    --app-primary-rgb: 141, 201, 177;
+    --app-primary-soft: #e6f6ef;
+    --app-primary-deep: #6eb194;
+    --mesh-a: rgba(141, 201, 177, 0.24);
+    --mesh-b: rgba(255, 255, 255, 0.86);
+    --mesh-c: rgba(231, 246, 238, 0.82);
+    --mesh-d: rgba(188, 225, 208, 0.22);
+    --app-text-tint: #5b8e76;
+}
+
+.app-navbar {
+    background: color-mix(in srgb, var(--app-bg) 72%, white 28%);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(var(--app-primary-rgb), 0.10);
+}
+
+.brand-bubble,
+.icon-badge {
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: linear-gradient(145deg, rgba(255,255,255,0.96), var(--app-primary-soft));
+    color: var(--app-primary);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 10px 24px rgba(var(--app-primary-rgb), 0.16);
+}
+
+.brand-bubble {
+    width: 56px;
+    height: 56px;
+    border-radius: 20px;
+}
+
+.brand-mark {
+    width: 28px;
+    height: 28px;
+    display: block;
+}
+
+.hero-card,
+.info-card,
+.schedule-mini-card,
+.soft-panel,
+.timeline-card,
+.empty-state,
+.qr-box,
+.phone-screen {
+    background: var(--app-card);
+    border-radius: var(--app-radius);
+    box-shadow: var(--app-shadow);
+    border: 1px solid rgba(var(--app-primary-rgb), 0.08);
+}
+
+.hero-card {
+    background:
+        radial-gradient(circle at top right, rgba(var(--app-primary-rgb), 0.18) 0%, transparent 28%),
+        radial-gradient(circle at 18% 18%, rgba(255,255,255,0.96) 0%, transparent 38%),
+        linear-gradient(145deg, color-mix(in srgb, var(--app-primary-soft) 52%, #ffffff 48%) 0%, #ffffff 100%);
+}
+
+.eyebrow {
+    display: inline-block;
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    background: var(--app-primary-soft);
+    color: var(--app-text-tint);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--app-primary);
+    --bs-btn-border-color: var(--app-primary);
+    --bs-btn-hover-bg: var(--app-primary-deep);
+    --bs-btn-hover-border-color: var(--app-primary-deep);
+    --bs-btn-active-bg: var(--app-primary-deep);
+    --bs-btn-active-border-color: var(--app-primary-deep);
+    --bs-btn-focus-shadow-rgb: var(--app-primary-rgb);
+}
+
+.btn-outline-secondary {
+    --bs-btn-color: #617081;
+    --bs-btn-border-color: rgba(var(--app-primary-rgb), 0.18);
+    --bs-btn-hover-bg: rgba(var(--app-primary-rgb), 0.08);
+    --bs-btn-hover-border-color: rgba(var(--app-primary-rgb), 0.16);
+    --bs-btn-hover-color: #2f3142;
+}
+
+.btn-light {
+    --bs-btn-bg: rgba(var(--app-primary-rgb), 0.08);
+    --bs-btn-border-color: rgba(var(--app-primary-rgb), 0.08);
+    --bs-btn-hover-bg: rgba(var(--app-primary-rgb), 0.12);
+    --bs-btn-hover-border-color: rgba(var(--app-primary-rgb), 0.12);
+}
+
+.phone-mockup {
+    width: 290px;
+    border-radius: 36px;
+    padding: 16px;
+    background: #2f3142;
+    box-shadow: 0 22px 50px rgba(47, 49, 66, 0.22);
+}
+
+.phone-screen {
+    padding: 1.2rem;
+    min-height: 410px;
+}
+
+.status-pill {
+    display: inline-block;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--app-primary-soft) 72%, #f7f5f2 28%);
+    color: color-mix(in srgb, var(--app-text-tint) 85%, #5e6675 15%);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.info-card,
+.schedule-mini-card,
+.soft-panel,
+.timeline-card,
+.empty-state {
+    padding: 1.25rem;
+}
+
+.info-card h3 {
+    font-size: 1.15rem;
+    margin-top: 1rem;
+    margin-bottom: 0.7rem;
+}
+
+.bg-soft-primary {
+    background: color-mix(in srgb, var(--app-primary-soft) 78%, #eef4ff 22%);
+}
+
+.bg-soft-success {
+    background: var(--app-success-soft);
+}
+
+.bg-soft-warning {
+    background: var(--app-warning-soft);
+}
+
+.timeline-list {
+    position: relative;
+    padding-left: 1rem;
+}
+
+.timeline-list::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: color-mix(in srgb, var(--app-primary-soft) 75%, #f3ddd7 25%);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1.25rem;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--app-primary-soft);
+    border: 5px solid color-mix(in srgb, var(--app-bg) 88%, white 12%);
+    box-shadow: 0 0 0 2px rgba(var(--app-primary-rgb), 0.22);
+}
+
+.event-date {
+    font-weight: 700;
+}
+
+.qr-box {
+    min-height: 240px;
+    padding: 1rem;
+}
+
+.empty-state {
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.75rem;
+    color: var(--app-secondary);
+}
+
+.empty-state i {
+    font-size: 2rem;
+}
+
+textarea.form-control,
+.form-control,
+.form-select {
+    border: 1px solid rgba(var(--app-primary-rgb), 0.16);
+    padding: 0.9rem 1rem;
+    background: rgba(255,255,255,0.92);
+}
+
+textarea.form-control:focus,
+.form-control:focus,
+.form-select:focus {
+    border-color: rgba(var(--app-primary-rgb), 0.42);
+    box-shadow: 0 0 0 0.2rem rgba(var(--app-primary-rgb), 0.12);
+}
+
+.card {
+    background: rgba(255,255,255,0.96);
+}
+
+pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.login-card {
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--app-primary-deep);
+}
+
+.qr-box-large {
+    min-height: 420px;
+    padding: 1.5rem;
+}
+
+.scanner-card {
+    background: linear-gradient(180deg, color-mix(in srgb, var(--app-primary-soft) 42%, #ffffff 58%) 0%, #ffffff 100%);
+    border: 1px solid rgba(var(--app-primary-rgb), 0.12);
+    border-radius: var(--app-radius);
+    padding: 1rem;
+}
+
+.reader-box {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #fff;
+}
+
+.reader-box video {
+    border-radius: 24px;
+}
+
+#reader {
+    min-height: 280px;
+}
+
+.status-pill,
+.badge,
+.eyebrow {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 991.98px) {
+    .phone-mockup {
+        width: 100%;
+        max-width: 320px;
+    }
+}
