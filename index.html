@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ma Web App Géoportail</title>
+  <link rel="stylesheet" href="style.css" />
 
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+
+<header>
+  <h1>🌍 Ma carte Géoportail</h1>
+  <p>Visualisation simple avec données IGN</p>
+</header>
+
+<section class="hero">
+  <button onclick="initMap()">Afficher la carte</button>
+</section>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
